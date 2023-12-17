@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import SplitScreen from './SplitScreen';
+import { Modal } from './Modal';
 
 
 const LeftComp = (props) => {
@@ -13,10 +14,15 @@ const RightComp = ({ name }) => {
 
 function App() {
   return (
-    <SplitScreen leftWeight={1} rightWeight={4}>
-      <LeftComp name="prakash" />
-      <RightComp name="credo" />
-    </SplitScreen>
+    <>
+      <Modal>
+        Hi Hello!
+        <SplitScreen leftWeight={1} rightWeight={4}>
+          <LeftComp name="prakash" />
+          <RightComp name="credo" />
+        </SplitScreen>
+      </Modal>
+    </>
   );
 }
 
